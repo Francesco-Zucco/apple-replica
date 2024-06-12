@@ -1,0 +1,47 @@
+[
+    {
+        "iphones": [
+            {
+                "id": 1,
+                "productName": "iPhone 15 Pro",
+                "description": "From $999 or $41.62/mo. for 24 mo.*",
+                "price": 999.0,
+                "param": "iphone-15-pro",
+                "productImage": "./images/iphones/iphone15pro.png"
+            },
+            {
+                "id": 2,
+                "productName": "iPhone 15",
+                "description": "From $799 or $33.29/mo. for 24 mo.*",
+                "price": 799.0,
+                "param": "iphone-15",
+                "productImage": "./images/iphones/iphone15.png"
+            },
+            {
+                "id": 3,
+                "productName": "iPhone 14",
+                "description": "From $699 or $29.12/mo. for 24 mo.*",
+                "price": 799.0,
+                "param": "iphone-14",
+                "productImage": "./images/iphones/iphone14.png"
+            },
+            {
+                "id": 4,
+                "productName": "iPhone 13",
+                "description": "From $599 or $24.95/mo. for 24 mo.*",
+                "price": 799.0,
+                "param": "iphone-13",
+                "productImage": "./images/iphones/iphone13.png"
+            },
+            {
+                "id": 5,
+                "productName": "iPhone SE",
+                "description": "From $599 or $24.95/mo. for 24 mo.*",
+                "price": 799.0,
+                "param": "iphone-se",
+                "productImage": "./images/iphones/iphonese.png"
+            }
+        ]
+    }
+    
+]
