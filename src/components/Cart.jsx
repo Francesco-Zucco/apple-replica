@@ -10,7 +10,11 @@ const Cart = () => {
   return (
     <div className="bg-white flex flex-col">
       {carts.map((item, key) => {
-        return <div key={key}>{item.prod.productName}</div>;
+        return (
+          <div key={key}>
+            {item.prod.productName} <span>H</span>
+          </div>
+        );
       })}
     </div>
   );
