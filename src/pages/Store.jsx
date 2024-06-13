@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Store = () => {
   const { products } = useFetchProducts();
   const carts = useSelector((store) => store.cart.items);
-  console.log(carts);
+  // console.log(carts);
 
   const dispatch = useDispatch();
   const handleAddToCart = (prod) => {
@@ -47,7 +47,7 @@ const Store = () => {
 
                   <button
                     onClick={() => handleAddToCart(prod)}
-                    className="h-[34px] pl-[14px] pr-[14px] pt-[5px] pb-[5px] bg-[#0071e3] rounded-[980px] text-[#fafafc]"
+                    className="h-[34px] pl-[14px] pr-[14px] pt-[5px] pb-[5px] hover:bg-[#0077ED] bg-[#0071e3] rounded-[980px] text-[#fafafc]"
                   >
                     Buy
                   </button>

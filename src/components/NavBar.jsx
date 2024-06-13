@@ -1,11 +1,19 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [collapse, setCollapse] = useState(false);
   const [showNavBar, setShowNavBar] = useState(false);
   const [button, setButton] = useState(true);
+  const [totalQuantity, setTotalQuantity] = useState(0);
+  const carts = useSelector((store) => store.cart.items);
   // const links = ["Store"];
+  useEffect(() => {
+    let total = 0;
+    carts.forEach((item) => (total += item.quantity));
+    setTotalQuantity(total);
+  }, [carts]);
 
   //to change the website appearance from desktop to mobile
   const handleResize = () => {
@@ -53,7 +61,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-[#161617cc] flex justify-center sticky top-0 z-[9999] backdrop-blur-[20px] w-full saturate-[180%]">
+    <nav className="bg-[#161617cc] flex justify-center sticky top-0 z-[9998] backdrop-blur-[20px] w-full saturate-[180%]">
       {/* Navbar when on DESKTOP  */}
       {collapse ? (
         ""
@@ -150,16 +158,41 @@ const NavBar = () => {
             </svg>
           </Link>
           <Link to={"/cart"} className="flex items-center ps-[8px] pe-[8px]">
-            <svg
-              fill="#cecece"
-              className="hover:fill-[#F9F9F9]"
-              height="45"
-              viewBox="0 0 17 48"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z"></path>
-            </svg>
+            {totalQuantity ? (
+              <div className="pr-[1px]">
+                <svg
+                  fill="#cecece"
+                  className="hover:fill-[#F9F9F9] absolute  top-0"
+                  height="45"
+                  viewBox="0 0 17 48"
+                  width="15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z"></path>
+                </svg>
+                <span
+                  className="relative bottom-[-6px] left-[6px] bg-[#FFFFFF] text-[#000000] text-[11px]
+            w-[14px] h-[14px] rounded-full flex justify-center items-center z-[9999]"
+                >
+                  <p className="pt-[1px] pb-[1px] pl-[1px] pr-[1px]">
+                    {totalQuantity}
+                  </p>
+                </span>
+              </div>
+            ) : (
+              <div className="pr-[1">
+                <svg
+                  fill="#cecece"
+                  className="hover:fill-[#F9F9F9] "
+                  height="45"
+                  viewBox="0 0 17 48"
+                  width="15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z"></path>
+                </svg>
+              </div>
+            )}
           </Link>
         </div>
       )}
@@ -195,16 +228,41 @@ const NavBar = () => {
             </Link>
             {/* SVG cart */}
             <Link to={"/cart"} className="flex items-center ps-[8px] pe-[8px]">
-              <svg
-                fill="#cecece"
-                className="hover:fill-[#F9F9F9]"
-                height="48"
-                viewBox="0 0 17 48"
-                width="17"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z"></path>
-              </svg>
+              {totalQuantity ? (
+                <div className="pr-[3px]">
+                  <svg
+                    fill="#cecece"
+                    className="hover:fill-[#F9F9F9] absolute  top-0"
+                    height="48"
+                    viewBox="0 0 17 48"
+                    width="17"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z"></path>
+                  </svg>
+                  <span
+                    className="relative bottom-[-6px] left-[8px] bg-[#FFFFFF] text-[#000000] text-[11px]
+            w-[14px] h-[14px] rounded-full flex justify-center items-center z-[9999]"
+                  >
+                    <p className="pt-[1px] pb-[1px] pl-[1px] pr-[1px]">
+                      {totalQuantity}
+                    </p>
+                  </span>
+                </div>
+              ) : (
+                <div className="pr-[1">
+                  <svg
+                    fill="#cecece"
+                    className="hover:fill-[#F9F9F9] "
+                    height="48"
+                    viewBox="0 0 17 48"
+                    width="17"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z"></path>
+                  </svg>
+                </div>
+              )}
             </Link>
             <div className="flex items-center ps-[8px] pe-[8px]">
               {/*SVG Burger button */}
