@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 
 const Store = () => {
   const { products } = useFetchProducts();
-  const carts = useSelector((store) => store.cart.items);
-  // console.log(carts);
 
   const dispatch = useDispatch();
   const handleAddToCart = (prod) => {

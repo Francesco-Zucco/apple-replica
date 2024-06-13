@@ -48,7 +48,7 @@ const Cart = () => {
                 Sign In
               </button>
               <Link to={"/store"}>
-                <button className="text-[17px] text-[#0071e3] hover:text-white bg-white border-[#0071e3] hover:bg-[#0071e3] flex justify-center items-center bg-[#0071e3] border w-[360px] h-[56px] mt-6 rounded-[13px]">
+                <button className="text-[17px] text-[#0071e3] hover:text-white bg-white border-[#0071e3] hover:bg-[#0071e3] flex justify-center items-center  border w-[360px] h-[56px] mt-6 rounded-[13px]">
                   Continue Shopping
                 </button>
               </Link>
