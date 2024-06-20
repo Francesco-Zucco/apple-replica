@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../store/cart";
 
 import { useFetchProducts } from "../components/useFetchProducts";
@@ -17,6 +17,8 @@ const Store = () => {
       })
     );
   };
+
+  // console.log(products);
 
   return (
     <div className="bg-[#f5f5f7] w-full flex flex-col gap-3 pl-10 pr-10 pt-10 pb-10">

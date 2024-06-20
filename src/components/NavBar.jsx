@@ -61,7 +61,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-[#161617cc] flex justify-center sticky top-0 z-[9998] backdrop-blur-[20px] w-full saturate-[180%]">
+    <nav className="bg-[#161617cc] flex justify-center sticky top-0 z-[8999] backdrop-blur-[20px] w-full saturate-[180%]">
       {/* Navbar when on DESKTOP  */}
       {collapse ? (
         ""
@@ -242,7 +242,7 @@ const NavBar = () => {
                   </svg>
                   <span
                     className="relative bottom-[-6px] left-[8px] bg-[#FFFFFF] text-[#000000] text-[11px]
-            w-[14px] h-[14px] rounded-full flex justify-center items-center z-[9999]"
+            w-[14px] h-[14px] rounded-full flex justify-center items-center z-[9400]"
                   >
                     <p className="pt-[1px] pb-[1px] pl-[1px] pr-[1px]">
                       {totalQuantity}
@@ -264,7 +264,7 @@ const NavBar = () => {
                 </div>
               )}
             </Link>
-            <div className="flex items-center ps-[8px] pe-[8px]">
+            <div className="flex items-center ps-[8px] pe-[8px] z-[9500]">
               {/*SVG Burger button */}
               <button
                 className="hover:fill-[#F9F9F9] text-[#cecece] z-[40]"
@@ -345,7 +345,7 @@ const NavBar = () => {
           </div>
           {showNavBar ? (
             // dropdown menu links
-            <div className="w-full h-[100vh] flex justify-around absolute left-0 right-0 bg-[#161617] z-[30] ">
+            <div className="w-full h-[100vh] flex justify-around absolute left-0 right-0 bg-[#161617] z-[9499] ">
               <div className="w-full h-full  bg-[#161617]  p-12 ">
                 {/* {links.map((link, i) => (
                   <Link

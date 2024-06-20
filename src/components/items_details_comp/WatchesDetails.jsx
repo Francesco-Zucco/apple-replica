@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
-import { useFetchProducts } from "./useFetchProducts";
+import { useFetchWatches } from "../useFetchProducts";
 
-const IphoneDetail = () => {
-  const { products } = useFetchProducts();
+const WatchesDetails = () => {
+  const { watchesData } = useFetchWatches();
   const { param } = useParams();
 
   const findMyProd = () => {
     // console.log("A");
-    const result = products.find((p) => p.param === param);
+    const result = watchesData.find((p) => p.param === param);
     return (
       <div className="w-full grid">
         <h2>{result.productName}</h2>
@@ -17,7 +17,7 @@ const IphoneDetail = () => {
     );
   };
 
-  return <div className="bg-white"> {products && findMyProd()}</div>;
+  return <div className="bg-white"> {watchesData && findMyProd()}</div>;
 };
 
-export default IphoneDetail;
+export default WatchesDetails;

@@ -107,10 +107,12 @@ const Home = () => {
                 <div className="  flex gap-4">
                   <button className="text-[14px] text-[#fafafc] border-[#0071e3] hover:bg-[#0077ED] bg-[#0071e3] border pr-[15px] pl-[15px] pt-[7px] pb-[7px]  rounded-[980px]">
                     Learn more
-                  </button>
-                  <button className="text-[14px] text-[#0071e3] border border-[#0071e3] hover:bg-[#0071e3] hover:text-[#fafafc] pr-[19px] pl-[19px] rounded-[980px] pt-[7px] pb-[7px] ">
-                    Buy
-                  </button>
+                  </button>{" "}
+                  <Link to={"/store/ipad-pro"}>
+                    <button className="text-[14px] text-[#0071e3] border border-[#0071e3] hover:bg-[#0071e3] hover:text-[#fafafc] pr-[19px] pl-[19px] rounded-[980px] pt-[7px] pb-[7px] ">
+                      Buy
+                    </button>{" "}
+                  </Link>
                 </div>
               </div>
             </div>
@@ -135,9 +137,11 @@ const Home = () => {
                   <button className="text-[17px] text-[#fafafc] border-[#0071e3] hover:bg-[#0077ED] bg-[#0071e3] border pr-[21px] pl-[21px] pt-[3px] pb-[3px] h-11 rounded-[980px]">
                     Learn more
                   </button>
-                  <button className="text-[17px] text-[#0071e3] border border-[#0071e3] hover:bg-[#0071e3] hover:text-[#fafafc] pl-[25px] pr-[25px] rounded-[980px] pt-[3px] pb-[3px] h-11">
-                    Buy
-                  </button>
+                  <Link to={"/store/ipad-pro"}>
+                    <button className="text-[17px] text-[#0071e3] border border-[#0071e3] hover:bg-[#0071e3] hover:text-[#fafafc] pl-[25px] pr-[25px] rounded-[980px] pt-[3px] pb-[3px] h-11">
+                      Buy
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

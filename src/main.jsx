@@ -23,7 +23,10 @@ import Entertainment from "./pages/Entertainment.jsx";
 import Cart from "./components/Cart.jsx";
 import { Provider } from "react-redux";
 import { store } from "./store/store.js";
-import IphoneDetail from "./components/IphoneDetail.jsx";
+import IphoneDetail from "./components/items_details_comp/IphoneDetail.jsx";
+import IpadsDetail from "./components/items_details_comp/IpadsDetails.jsx";
+import WatchesDetails from "./components/items_details_comp/WatchesDetails.jsx";
+import MacDetails from "./components/items_details_comp/MacDetails.jsx";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -41,7 +44,11 @@ const routes = createBrowserRouter(
       <Route path="/iphones" element={<Iphone />} />
       <Route path="/entertainment" element={<Entertainment />} />
       <Route path="/cart" element={<Cart />} />
-      <Route path="/store/:param" element={<IphoneDetail />} />
+      {/* <Route path="/store/:param" element={<IphoneDetail />} /> */}
+      <Route path="/watches/:param" element={<WatchesDetails />} />
+      <Route path="/ipads/:param" element={<IpadsDetail />} />
+      <Route path="/iphones/:param" element={<IphoneDetail />} />
+      <Route path="/mac/:param" element={<MacDetails />} />
     </Route>
   )
 );

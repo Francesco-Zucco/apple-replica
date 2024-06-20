@@ -42,6 +42,152 @@
                 "productImage": "./images/iphones/iphonese.png"
             }
         ]
+        
+    },
+    {
+        "ipads": [
+            {
+                "id": 6,
+                "productName": "iPad Pro",
+                "description": "From $999 or $83.25/mo. for 12 mo.*",
+                "price": 999.0,
+                "param": "ipad-pro",
+                "productImage": "./images/ipads/ipad_pro.png"
+            },
+            {
+                "id": 7,
+                "productName": "iPad Air",
+                "description": "From $599 or $49.91/mo. for 12 mo.*",
+                "price": 599.0,
+                "param": "ipad-air",
+                "productImage": "./images/ipads/ipad_air.png"
+            },
+            {
+                "id": 8,
+                "productName": "iPad",
+                "description": "From $349 or $29.08/mo. for 12 mo.*",
+                "price": 349.0,
+                "param": "ipad",
+                "productImage": "./images/ipads/ipad_10th_gen.png"
+            },
+            {
+                "id": 9,
+                "productName": "iPad mini",
+                "description": "From $449 or $41.58/mo. for 12 mo.*",
+                "price": 449.0,
+                "param": "ipad-mini",
+                "productImage": "./images/ipads/ipad_mini.png"
+            }
+        ]
+        
+    },
+    {
+        "macbooks": [
+            {
+                "id": 10,
+                "productName": "MacBook Air M3",
+                "description": "From $999 or $83.25/mo. for 12 mo.*",
+                "price": 999.0,
+                "param": "macbook-air-m3",
+                "productImage": "./images/computers/macbook_air_13_m2.png"
+            },
+            {
+                "id": 11,
+                "productName": "MacBook Pro",
+                "description": "From $1599 or $133.25/mo. for 12 mo.*",
+                "price": 1599.0,
+                "param": "macbook-pro",
+                "productImage": "./images/computers/macbook_pro_14.png"
+            },
+            {
+                "id": 12,
+                "productName": "iMac",
+                "description": "From $1299 or $108.25/mo. for 12 mo.*",
+                "price": 1299.0,
+                "param": "imac",
+                "productImage": "./images/computers/imac.png"
+            },
+            {
+                "id": 13,
+                "productName": "Mac Studio",
+                "description": "From $1999 or $166.58/mo. for 12 mo.*",
+                "price": 1999.0,
+                "param": "mac-studio",
+                "productImage": "./images/computers/mac-studio.png"
+            },
+            {
+                "id": 14,
+                "productName": "Mac mini",
+                "description": "From $599 or $49.91/mo. for 12 mo.*",
+                "price": 599.0,
+                "param": "mac-mini",
+                "productImage": "./images/computers/mac-mini.png"
+            },
+            {
+                "id": 15,
+                "productName": "Mac Pro",
+                "description": "From $6999 or $583.25/mo. for 12 mo.*",
+                "price": 6999.0,
+                "param": "mac-pro",
+                "productImage": "./images/computers/mac-pro-desktop.jpg"
+            },
+            {
+                "id": 16,
+                "productName": "Pro Display XDR",
+                "description": "From $4999 or $416.58/mo. for 12 mo.*",
+                "price": 4999.0,
+                "param": "pro-display-xdr",
+                "productImage": "./images/computers/proxdr-display.jpg"
+            },
+            {
+                "id": 17,
+                "productName": "Studio Display",
+                "description": "From $1599 or $133.25/mo. for 12 mo.*",
+                "price": 1599.0,
+                "param": "studio-display",
+                "productImage": "./images/computers/studio-display.png"
+            }
+            
+        ]
+        
+    },
+    {
+        "watches": [
+            {
+                "id": 18,
+                "productName": "Apple Watch Series 9",
+                "description": "From $399 or $33.25/mo. for 12 mo.*",
+                "price": 399.0,
+                "param": "apple-watch-series-9",
+                "productImage": "./images/watches/watch1.png"
+            },
+            {
+                "id": 19,
+                "productName": "Apple Watch Ultra 2",
+                "description": "From $799 or $366.58/mo. for 12 mo.*",
+                "price": 799.0,
+                "param": "apple-watch-ultra-2",
+                "productImage": "./images/watches/watch2.png"
+            },
+            {
+                "id": 20,
+                "productName": "Apple Watch SE",
+                "description": "From $249 or $20.75/mo. for 12 mo.*",
+                "price": 249.0,
+                "param": "apple-watch-se",
+                "productImage": "./images/watches/watch3.png"
+            },
+            {
+                "id": 21,
+                "productName": "Apple Watch Hermès",
+                "description": "From $1249 or $3104.08/mo. for 12 mo.*",
+                "price": 1249.0,
+                "param": "apple-watch-series-9",
+                "productImage": "./images/watches/watch4.png"
+            }
+           
+            
+        ]
+        
     }
-    
 ]
